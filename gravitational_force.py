@@ -5,3 +5,5 @@ def gravitational_force(m1, m2, r):
     if r == 0:
         raise ValueError("Distance between objects cannot be zero.")
     return G * (m1 * m2) / r**2
+
+# aggiungo un commento per poter caricare su github
