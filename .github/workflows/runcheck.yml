@@ -1,0 +1,24 @@
+name: Run at every commit
+run-name: ${{ github.actor }} is running the tests at every commit
+
+on: [push]
+
+jobs:
+  Run-Tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+
+
+
+      - name: Run tests
+        run: |
+          run: |
+          if [ -f pytest.ini ] || [ -d tests ]; then
+            pytest
+          else
+            echo "No tests found to run."
+          fi
