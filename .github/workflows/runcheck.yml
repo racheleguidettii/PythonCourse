@@ -16,7 +16,6 @@ jobs:
 
       - name: Run tests
         run: |
-          run: |
           if [ -f pytest.ini ] || [ -d tests ]; then
             pytest
           else
